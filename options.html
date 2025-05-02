@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Response Analyzer Options</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      min-width: 300px; /* Ensure popup has some width */
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    textarea {
+      width: 95%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Response Analyzer Settings</h2>
+
+  <label for="searchWord">Word to search for:</label>
+  <input type="text" id="searchWord">
+
+  <label for="allowedDomains">Allowed Domains (one per line):</label>
+  <textarea id="allowedDomains"></textarea>
+
+  <div>
+      <input type="checkbox" id="analyzeFiles" name="analyzeFiles">
+      <label for="analyzeFiles" style="display: inline; margin-top: 0; font-weight: normal;">Analyze static files (JS, CSS, SVG, etc.) as well?</label>
+  </div>
+
+  <button id="save">Save Settings</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

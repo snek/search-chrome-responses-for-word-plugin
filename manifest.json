@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Response Analyzer",
+  "version": "1.0",
+  "description": "Analyzes responses from specified domains for a configurable word.",
+  "permissions": [
+    "storage",
+    "webRequest", 
+    "notifications",
+    "debugger" 
+  ],
+  "host_permissions": [
+    "<all_urls>" 
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": {
+    }
+  }
+}
